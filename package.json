@@ -1,22 +1,43 @@
 {
-  "name": "react-ts-scss-boilerplate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "react-cookie-input",
+  "version": "1.0.1",
+  "author": "Jeffery Bennett <me@meandmybadself.com>",
+  "description": "A React text input that persists values as cookies.",
   "scripts": {
     "precommit": "lint-staged",
     "dev": "parcel serve src/index.html --open",
-    "build": "rm -rf public & parcel build src/index.html --out-dir public --no-source-maps"
+    "build:module": "rm -rf dist & tsc",
+    "prepublishOnly": "npm run build:module",
+    "build:docs": "rm -rf docs & parcel build src/index.html --out-dir docs --no-source-maps --public-url ./react-cookie-input/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "input",
+    "cookie"
+  ],
+  "main": "dist/cookie-text-input.js",
+  "types": "dist/cookie-text-input.d.ts",
+  "bugs": "https://github.com/Meandmybadself/react-cookie-input/issues",
+  "homepage": "https://github.com/Meandmybadself/react-cookie-input",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Meandmybadself/react-cookie-input.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "private": false,
   "xo": {
     "extends": [
       "prettier"
     ],
+    "includes": [
+      "src/**/*.*"
+    ],
     "ignore": [
-      "node_modules/**/*.*"
+      "node_modules/**/*.*",
+      "docs/**/*.*"
     ],
     "rules": {
       "@typescript-eslint/no-unsafe-member-access": 0,
@@ -34,10 +55,10 @@
     ]
   },
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^17.0.2"
+    "js-cookie": "^2.2.1"
   },
   "devDependencies": {
+    "@types/js-cookie": "^2.2.6",
     "@types/react": "^17.0.6",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^6.0.0",
@@ -47,5 +68,13 @@
     "sass": "^1.34.0",
     "typescript": "^4.2.4",
     "xo": "^0.40.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "source": "src/components/cookie-text-input.tsx",
+    "main": "dist/index.min.js"
   }
 }

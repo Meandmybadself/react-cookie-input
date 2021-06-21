@@ -20,8 +20,11 @@ body,
     height: 100%;
 }
 
-
+h1 {
+    font-size: 3em;
+}
 div#app {
-    font-family: "SF Pro Text", -apple-system, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
-        sans-serif;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
 }

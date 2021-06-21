@@ -1,7 +1,11 @@
 {
     "compilerOptions": {
+        "declaration": true,
         "jsx": "react",
         "esModuleInterop": true,
         "outDir": "./dist"
-    }
+    },
+    "include": [
+        "src/components/cookie-text-input.tsx"
+    ],
 }

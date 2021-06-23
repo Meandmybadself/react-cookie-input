@@ -8,7 +8,7 @@
     "dev": "parcel serve src/index.html --open",
     "build:module": "rm -rf dist & tsc",
     "prepublishOnly": "npm run build:module",
-    "build:docs": "rm -rf docs & parcel build src/index.html --out-dir docs --no-source-maps --public-url ./react-cookie-input/"
+    "build:docs": "rm -rf docs & parcel build src/index.html --out-dir docs --no-source-maps"
   },
   "keywords": [
     "react",
@@ -67,7 +67,9 @@
     "prettier": "^2.3.0",
     "sass": "^1.34.0",
     "typescript": "^4.2.4",
-    "xo": "^0.40.1"
+    "xo": "^0.40.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",

@@ -25,6 +25,30 @@ h1 {
 }
 div#app {
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
+}
+
+label {
+    font-size: 2em;
+    input {
+        font-size: 1.5em;
+        font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        padding: 5px;
+        font-weight: 300;
+    }
+}
+
+label span {
+    font-weight: bold;
+    font-size: 2;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
 }
